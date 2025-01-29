@@ -127,3 +127,18 @@ function createEmployee(salary: number | string): Teacher | Director {
 console.log(executeWork(createEmployee(200)));  // Output: "Getting to work"
 console.log(executeWork(createEmployee(1000))); // Output: "Getting to director tasks"
 
+// Define the string literal type Subjects
+type Subjects = "Math" | "History";
+
+// Function that takes a subject and returns the corresponding teaching message
+function teachClass(todayClass: Subjects): string {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    } else {
+        return "Teaching History";
+    }
+}
+
+// Test cases
+console.log(teachClass("Math"));    // Output: Teaching Math
+console.log(teachClass("History")); // Output: Teaching History
