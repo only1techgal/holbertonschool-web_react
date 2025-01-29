@@ -1,4 +1,4 @@
-// Define the teacher interface
+// Define the 'teacher' interface
 interface teacher {
     firstName: string; // Can only be set during initialization 
     lastName: string; // Can only be set during initialization 
@@ -8,7 +8,7 @@ interface teacher {
     [key: string]: any; // Alows addxitional attributes of any sort
 }
 
-// Create teacher variable
+// Create 'teacher' variable
 const teacher1: teacher = {
     firstName: "Francoise",
     lastName: "Piere",
@@ -18,10 +18,10 @@ const teacher1: teacher = {
     contract: true, // Extra attribute
 }
 
-// Logs the teacher object
+// Logs the 'teacher' variable
 console.log(teacher1);
 
-// Define the 'Director' interace that extends 'Teacher'
+// Define the 'Director' inteface that extends 'Teacher'
 interface Director extends teacher {
     numberOfReports: number; // The new required property
 }
@@ -36,3 +36,14 @@ const director1: Director = {
 
 // Logs the director object
 console.log(director1);
+
+// Define the interface for 'printTeacherFunction' function
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+// Implement the printTeacher function based on the interface
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+    return `${firstName[0]}. ${lastName}`;
+}
+console.log(printTeacher("Francoise", "Piere")); // Output: F. Piere
