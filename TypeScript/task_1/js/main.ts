@@ -1,5 +1,6 @@
+ 
 // Define the 'teacher' interface
-interface teacher {
+export interface teacher {
     firstName: string; // Can only be set during initialization 
     lastName: string; // Can only be set during initialization 
     fullTimeEmployee: boolean;
